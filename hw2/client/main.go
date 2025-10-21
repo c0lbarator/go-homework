@@ -29,7 +29,7 @@ func main() {
 	// 2) POST /decode
 	original := "blablabla"
 	enc := base64.StdEncoding.EncodeToString([]byte(original))
-	reqBody := map[string]string{"inputString": enc}
+	reqBody := api.DecodeRequest{InputString: enc}
 	b, _ := json.Marshal(reqBody)
 	resp2, err := client.Post(base+"/decode", "application/json", bytes.NewReader(b))
 	if err != nil {
