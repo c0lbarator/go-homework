@@ -1,3 +1,3 @@
-module hw2
+module hw3
 
 go 1.24.7
